@@ -1,20 +1,44 @@
 <%- include('partials/header.ejs') %>
+<body>
+  <section class="headerSection" style=" background-size:cover;">
+    <div class="header">
+      <h1>Blogs</h1>
+        <a href="/compose"><button type="button" name="button">Contribute to our blog!</button></a>
+    </div>
+  </section>
+  <div class="container">
+    <main>
+      <div class="row">
+      <% var count=1; %>
+      <% for(i = (posts.length - 1); i >= 0; i--) {%>
+        <a href="/post/<%= posts[i].id %>">
+      <div class="card col-sm-12 col-md-4">
+        <div class="cardBorder">
 
-<h1>Home</h1>
-<p>
-  <%= msg %>
+        <div style="background: <%= colors[i%colors.length] %>" id="bgCol" class="blogNumImg">
+          <p>N.</p>
+          <p style="color: <%= colors[i%colors.length] %>"><%= count%></p>
+          <i> <p class="innerP">Scroll for more!</p></i>
+          <!-- <div class="innerBlogNumOver"></div> -->
+        </div>
+        <div class="padding">
+          <div class="text">
 
-</p>
-<p>
-  <strong>Contribute to our blog!</strong> <a href="/compose">Click here</a>
-</p>
-<% for(i = (posts.length - 1); i >= 0; i--) { %>
-<h2><a href="/post/<%= posts[i].id %>"><%= posts[i].title %></a></h2>
-<p>
-  <%= _.truncate(posts[i].post, { 'length': 100, 'separator': ' '}); %>
-  (<a href="/post/<%= posts[i].id %>">read more</a>)
-</p>
-<p> <i>~By <%=posts[i].name%> </i></p>
-<p><i><small><%= posts[i].date %></small></i></p>
-<% } %>
+      <h2><%= posts[i].title %></h2>
+      <p>
+        <%= _.truncate(posts[i].post, { 'length': 100, 'separator': ' '}); %>
+        <!-- (<a href="/post/<%= posts[i].id %>">read more</a>) -->
+      </p>
+      <p> <i>~By <%=posts[i].name%> </i></p>
+      <p class="textP"><i><small><%= posts[i].date %></small></i></p>
+    </div>
+        </div>
+      </div>
+
+      </a>
+      </div>
+      <% var count= count+1; %>
+      <% } %>
+
+      </div>
 <%- include('partials/footer.ejs') %>

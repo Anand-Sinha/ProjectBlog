@@ -21,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.get('/', function(req, resp) {
   blog.fetchPosts(function(posts) {
-    resp.render('home.ejs', {msg: homeStartingContent, posts: posts, _: lodash});
+    resp.render('home.ejs', {msg: homeStartingContent, posts: posts, _: lodash, colors: [ '#444444','#3C415C','#351F39','#222831','#393E46','#892CDC','#525252','#2D6E7E','#278EA5']});
   });
 });
 
