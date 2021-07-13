@@ -24,10 +24,12 @@
     <div class="container">
       <main>
 <h1><%= posts[i].title %></h1>
+<p><i>~By <%= posts[i].name %></i></p>
+<p><i><small><%= posts[i].date %></small></i></p>
 <p>
+  <br><br>
   <%- posts[i].post %>
 </p>
-<p><i><small><%= posts[i].date %></small></i></p>
 <%  } %>
 <% } %>
 <p>

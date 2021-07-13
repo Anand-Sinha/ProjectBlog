@@ -17,6 +17,9 @@ a:hover{
   color: #1abc9c;
   text-decoration: none;
 }
+::selection{
+  background-color: #1abc9c;
+}
 .headerSection{
   background: #1abc9c url("/img/6.jpg");
   background-blend-mode: hard-light;
@@ -52,7 +55,7 @@ a:hover{
 .container{
   /* margin-top: 200px; */
   background-color: #fff;
-  transform: translateY(-7%);
+  /* transform: translateY(-7%); */
   padding: 45px 90px;
   border-top: 5px solid #1abc9c;
   box-shadow: 0 0px 8px rgba(0,0,0,0.4);
@@ -102,10 +105,10 @@ a:hover{
     font-weight: 800;
     font-size: 7rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 0;
 }
-.header button{
+.header button,.btn-primary{
   padding: 10px 40px;
   margin: 0;
   border-radius: 5px;
@@ -116,6 +119,11 @@ a:hover{
 }
 .header button:hover{
   background-color: rgba(0,0,0,0.4);
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+}
+.btn-primary:hover{
+    background-color: rgba(0,0,0,0);
   border: 2px solid #1abc9c;
   color: #1abc9c;
 }
@@ -216,4 +224,58 @@ h4{
   color: white;
   font-size: 16px;
   padding: 4px;
+}
+.footerId{
+  margin: 30px auto;padding:50px; text-align:center;width:70%; box-shadow: 0 0px 20px -10px #000;
+}
+.desc{
+  width:50%;margin:auto;
+}
+.our_team_img{
+  width: 250px;border-radius: 100%;filter:grayscale(100%); margin: 20px auto;
+}
+.titleFont{
+  font-weight: 500;
+  font-size: 2.6rem;
+  /* color: #1abc9c; */
+}
+@media (max-width: 1500px) {
+  .container,.footerId{
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  #about,#contact,#home{
+    display: none;
+  }
+  .header h1{
+    padding: 10vh 0 0;
+  }
+}
+@media (max-width: 500px) {
+.navbar {
+display: none;
+}
+.header{
+  margin: 0 auto;
+}
+.container{
+  /* transform: translateY(-5%); */
+  padding: 30px;
+}
+.desc{
+  width:100%;
+  text-align: justify;
+}
+.header h1{
+    padding: 15vh 0 0;
+  font-size: 4rem;
+}
+.our_team_img{
+  width: 180px;
+}
+.titleFont{
+  font-size: 2rem;
+  font-weight: 600;
+}
 }
