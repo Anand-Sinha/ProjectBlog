@@ -1,15 +1,28 @@
 <%- include('partials/header.ejs') %>
 
-  <body>
-    <div class="container">
-      <main>
 <% if (!posts) { %>
-<h1>No matching posts found</h1>
-<p>
-  <%- msg %>
-</p>
+  <body>
+    <main>
+      <section class="headerSection" style=" background-size:cover;">
+        <div class="header">
+          <h1>#404 Not Found</h1>
+          <a href="/compose"><button type="button" name="button">Contribute to our blog!</button></a>
+        </div>
+      </section>
+    <div class="container">
+<h1><%- msg %></h1>
+
 <% } else { %>
 <%  for(i = (posts.length - 1); i >= 0; i--) { %>
+  <body>
+    <section class="headerSection" style=" background-size:cover;">
+      <div class="header">
+        <h1><%= posts[i].title %></h1>
+        <a href="/compose"><button type="button" name="button">Contribute to our blog!</button></a>
+      </div>
+    </section>
+    <div class="container">
+      <main>
 <h1><%= posts[i].title %></h1>
 <p>
   <%- posts[i].post %>

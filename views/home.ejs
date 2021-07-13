@@ -16,9 +16,9 @@
         <div class="cardBorder">
 
         <div style="background: <%= colors[i%colors.length] %>" id="bgCol" class="blogNumImg">
-          <p>N.</p>
+          <p class="absolute">blog.</p>
           <p style="color: <%= colors[i%colors.length] %>"><%= count%></p>
-          <i> <p class="innerP">Scroll for more!</p></i>
+          <!-- <i> <p class="innerP">Scroll for more!</p></i> -->
           <!-- <div class="innerBlogNumOver"></div> -->
         </div>
         <div class="padding">
@@ -41,4 +41,5 @@
       <% } %>
 
       </div>
+
 <%- include('partials/footer.ejs') %>
