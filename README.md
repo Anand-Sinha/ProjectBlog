@@ -4,7 +4,7 @@
 See
 - [BlogMe](https://project-anands-blog.herokuapp.com/)
 
-## UpHealth - The ideal solution to all your medical needs.
+## BlogMe - The ideal solution to all needs.
 
 <p align="justify">The purpose of Blog Me is to automate the existing manual system by the help of computerized equipments and full-fledged web app, fulfilling the requirements, so that the valuable data/information can be stored for a longer period with easy accessing and manipulation of the same.</p>
 
